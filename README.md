@@ -90,3 +90,23 @@
 ### Level 19 
 
 - Password : IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x
+- ```./bandit20-do cat /etc/bandit_pass/bandit20```
+
+### Level 20 
+
+- Password : GbKksEFF4yrVs6il55v6gwY5aVje5f0j
+- ```netcat -vvl 127.0.0.1 -p 1111``` to send messages to the binary which connects on port 1111. 
+
+### Level 21 
+
+- Password : gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr
+- Check cron file which leads to the sh file and then get the password from there. 
+
+### Level 22 
+
+- Password : Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
+- Cron file was putting the password in the tmp folder. For each user it was creating a copy in the tmp folder but in md5 format. So modifying the line in cronfile led to the file which held the password. 
+
+### Level 23
+
+- Password : jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
