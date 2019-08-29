@@ -107,6 +107,22 @@
 - Password : Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI
 - Cron file was putting the password in the tmp folder. For each user it was creating a copy in the tmp folder but in md5 format. So modifying the line in cronfile led to the file which held the password. 
 
-### Level 23
+### Level 23 
 
 - Password : jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n
+- Create a shell script inside a folder in the the tmp folder and also a text file inside the same folder. ```chmod 777``` both the files. 
+- the shell script should cat the password in the bandit_pass folder for user bandit24 into a text file in the tmp directory
+- cp the shell script from current tmp folder to ```/var/spool/bandit24``` to make a copy of the script that will execute with the cron job. 
+- The password is available in the text file in the tmp folder. 
+
+### Level 24 : 
+
+- Password : UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ
+
+- Using Brute force with netcat to add check for the password. 
+
+- ```for i in {0000..9999}; do     echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"; done | nc localhost 30002 > /tmp/valay/bandit25.txt```
+
+### Level 25 : 
+
+- Password : `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
