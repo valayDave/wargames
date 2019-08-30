@@ -140,7 +140,7 @@ done | nc localhost 30002 > /tmp/valay/bandit25.txt
 - Password : ```5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z```
 - The ssh is modified to launch the ```more``` command and then exit. So resizing the window works for the more command. Once the window is small enough a size the more command works and the shell session doesnt exist. The more can convert to vi by pressing ```v``` in the more interface. 
 - Using the ```:e /etc/bandit_pass/bandit26``` in the more interface gets us the password file for 26. 
-- On top of that vi can offer an access to the shell from there. once can set shell in a variable in vi to call the shell. issue the command : ```:set shell=/bin/bash``` to the vi. Once set calling ```:shell``` to vi will open the shell for the user. 
+- On top of that vi can offer an access to the shell from there. issue the command : ```:set shell=/bin/bash``` to the vi. Once set calling ```:shell``` to vi will open the shell for the user. 
 
 ### Level 27 
 
@@ -155,3 +155,25 @@ done | nc localhost 30002 > /tmp/valay/bandit25.txt
 ### Level 29 
 
 - Password : ```bbc96594b4e001778eee9975372716b2```
+- Password was present on a ref which held ```packed-refs``` which contain the different banch references from origin. One of the branches contained the password readme. 
+
+### Level 30 
+
+- Password : ```5b90576bedb2cc04c86a9e924ce42faf```
+- One of the refs in the ```packed-refs``` contained a ref which gave the secret via ```git show f17132340e8ee6c159e0a4a6bc6f80e1da3b1aea``` 
+
+
+### Level 31
+
+- Password : ```47e603bb428404d265f59c42920d81e5```
+- Required to override a file extension present in ```.gitignore``` for txt files. Required to create, commit and send a text file to origin which contained a message. 
+
+### Level 32
+
+- Password : ```56a9bf19c63d650ce78e6ec0354ee45e```
+- using ```$0``` one can return back to original bash
+- and then find the password in banditpass. 
+
+### Level 33
+
+- Password : ```c9c3199ddf4121b10cf581a98d51caee```
