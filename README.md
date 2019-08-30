@@ -125,4 +125,33 @@
 
 ### Level 25 : 
 
-- Password : `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`
+- Password : `uNG9O58gUE7snukf3bvZ0rxhtnjzSGzG`: Private Key given on lvl 25 for level 26. 
+- Script to get password : 
+```sh
+for i in {0000..9999}; 
+do     
+    echo "UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ $i"; 
+done | nc localhost 30002 > /tmp/valay/bandit25.txt
+
+```
+
+### Level 26 :
+
+- Password : ```5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z```
+- The ssh is modified to launch the ```more``` command and then exit. So resizing the window works for the more command. Once the window is small enough a size the more command works and the shell session doesnt exist. The more can convert to vi by pressing ```v``` in the more interface. 
+- Using the ```:e /etc/bandit_pass/bandit26``` in the more interface gets us the password file for 26. 
+- On top of that vi can offer an access to the shell from there. once can set shell in a variable in vi to call the shell. issue the command : ```:set shell=/bin/bash``` to the vi. Once set calling ```:shell``` to vi will open the shell for the user. 
+
+### Level 27 
+
+- Password : ```3ba3118a22e93127a4ed485be72ef5ea``` 
+- Git clone of repository gave the output. 
+
+### Level 28 
+
+- Password : ```0ef186ac70e04ea33b4c1853d2526fa2```
+- Password stored in the git history of the repository. 
+
+### Level 29 
+
+- Password : ```bbc96594b4e001778eee9975372716b2```
